@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{55B1E216-ABDF-4DC7-B2A4-62760F96B525}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GoldBoxExplorer.Lib</RootNamespace>
+    <AssemblyName>GoldBoxExplorer.Lib</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevIL.NET">
+      <HintPath>..\Lib\DevIL.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Version.cs">
+      <Link>Version.cs</Link>
+    </Compile>
+    <Compile Include="ExceptionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExceptionDialog.Designer.cs">
+      <DependentUpon>ExceptionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exceptions\AppSettings.cs" />
+    <Compile Include="Exceptions\HandledExceptionManager.cs" />
+    <Compile Include="Exceptions\UnhandledExceptionHandler.cs" />
+    <Compile Include="Frua\ByteHelper.cs" />
+    <Compile Include="Frua\ImageIdTableEntry.cs" />
+    <Compile Include="Frua\LockBitmap.cs" />
+    <Compile Include="GoldBoxFile.cs" />
+    <Compile Include="GoldBoxFileParameters.cs" />
+    <Compile Include="IFileBlockSpecification.cs" />
+    <Compile Include="IGoldBlockFileSpecification.cs" />
+    <Compile Include="IGoldBoxViewer.cs" />
+    <Compile Include="Plugins\Character\FruaCharacter.cs" />
+    <Compile Include="Plugins\Character\FruaCharacterFile.cs" />
+    <Compile Include="Plugins\Character\FruaCharacterPlugin.cs" />
+    <Compile Include="Plugins\Character\FruaCharacterViewer.cs" />
+    <Compile Include="Plugins\FileHelper.cs" />
+    <Compile Include="Plugins\DaxEcl\Commands.cs" />
+    <Compile Include="Plugins\DaxEcl\DaxFile.cs" />
+    <Compile Include="Plugins\DaxEcl\Memory.cs" />
+    <Compile Include="Plugins\DaxEcl\Program.cs" />
+    <Compile Include="Plugins\DaxEcl\Sys.cs" />
+    <Compile Include="Plugins\Dax\DaxWallDefPlugin.cs" />
+    <Compile Include="Plugins\Dax\DaxWallDefViewer.cs" />
+    <Compile Include="Plugins\Dax\DaxWallDefFile.cs" />
+    <Compile Include="Plugins\Dax\DaxFile.cs" />
+    <Compile Include="Plugins\Dax\DaxFileBlock.cs" />
+    <Compile Include="Plugins\Dax\DaxFileHeaderEntry.cs" />
+    <Compile Include="Plugins\Dax\DaxImageFile.cs" />
+    <Compile Include="Plugins\Dax\DaxImagePlugin.cs" />
+    <Compile Include="Plugins\Dax\DaxImageViewer.cs" />
+    <Compile Include="Plugins\Dax\EgaBlock.cs" />
+    <Compile Include="Plugins\Dax\EgaBlockSpecification.cs" />
+    <Compile Include="Plugins\Dax\EgaSpriteBlock.cs" />
+    <Compile Include="Plugins\Dax\EgaSpriteBlockSpecification.cs" />
+    <Compile Include="Plugins\Dax\EgaVgaPalette.cs" />
+    <Compile Include="Plugins\Dax\FileBlockParameters.cs" />
+    <Compile Include="Plugins\Dax\IRenderBlock.cs" />
+    <Compile Include="Plugins\Dax\MonoBlock.cs" />
+    <Compile Include="Plugins\Dax\MonoBlockSpecification.cs" />
+    <Compile Include="Plugins\Dax\RenderBlock.cs" />
+    <Compile Include="Plugins\Dax\RenderBlockFactory.cs" />
+    <Compile Include="Plugins\Dax\UnknownBlock.cs" />
+    <Compile Include="Plugins\Dax\VgaBlock.cs" />
+    <Compile Include="Plugins\Dax\VgaBlockSpecification.cs" />
+    <Compile Include="Plugins\Dax\VgaMixedBlock.cs" />
+    <Compile Include="Plugins\Dax\VgaMixedBlockSpecification.cs" />
+    <Compile Include="Plugins\Dax\VgaSpriteBlock.cs" />
+    <Compile Include="Plugins\Dax\VgaSpriteBlockSpecification.cs" />
+    <Compile Include="Plugins\Dax\VgaStrataBlock.cs" />
+    <Compile Include="Plugins\Dax\VgaStrataBlockSpecification.cs" />
+    <Compile Include="Plugins\DaxEcl\DaxEclFile.cs" />
+    <Compile Include="Plugins\DaxEcl\DaxEclPlugin.cs" />
+    <Compile Include="Plugins\DaxEcl\EclFileViewer.cs" />
+    <Compile Include="Plugins\Dax\WallTemplateExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plugins\Dax\WallTemplateExportForm.Designer.cs">
+      <DependentUpon>WallTemplateExportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\GameData\FruaGameData.cs" />
+    <Compile Include="Plugins\GameData\FruaGameDataFile.cs" />
+    <Compile Include="Plugins\GameData\FruaGameDataPlugin.cs" />
+    <Compile Include="Plugins\GameData\FruaGameDataFileViewer.cs" />
+    <Compile Include="Plugins\GeoDax\GeoDaxFile.cs" />
+    <Compile Include="Plugins\GeoDax\GeoDaxPlugin.cs" />
+    <Compile Include="Plugins\GeoDax\GeoDaxFileViewer.cs" />
+    <Compile Include="Plugins\GeoDax\GeoExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plugins\GeoDax\GeoExportForm.Designer.cs">
+      <DependentUpon>GeoExportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\GeoDax\GeoMapRecord.cs" />
+    <Compile Include="Plugins\GeoDax\GeoWallRecord.cs" />
+    <Compile Include="Plugins\Geo\EntryPoint.cs" />
+    <Compile Include="Plugins\Geo\Event.cs" />
+    <Compile Include="Plugins\Geo\FruaGeoFile.cs" />
+    <Compile Include="Plugins\Geo\FruaGeoPlugin.cs" />
+    <Compile Include="Plugins\Geo\FruaGeoFileViewer.cs" />
+    <Compile Include="Plugins\Geo\IEventStrategy.cs" />
+    <Compile Include="Plugins\Geo\MapGrid.cs" />
+    <Compile Include="Plugins\Geo\RestEvent.cs" />
+    <Compile Include="Plugins\Geo\StepEvent.cs" />
+    <Compile Include="Plugins\Glb\FruaCommonGlbFileHeader.cs" />
+    <Compile Include="Plugins\Glb\FruaGlbFile.cs" />
+    <Compile Include="Plugins\Glb\FruaGlbPlugin.cs" />
+    <Compile Include="Plugins\Glb\FruaGlbFileViewer.cs" />
+    <Compile Include="Plugins\Glb\FruaSecondGlbHeader.cs" />
+    <Compile Include="Plugins\Hex\BinaryFile.cs" />
+    <Compile Include="Plugins\Hex\BytePositionInfo.cs" />
+    <Compile Include="Plugins\Hex\DataBlock.cs" />
+    <Compile Include="Plugins\Hex\DataMap.cs" />
+    <Compile Include="Plugins\Hex\DefaultByteCharConverter.cs" />
+    <Compile Include="Plugins\Hex\DynamicFileByteProvider.cs" />
+    <Compile Include="Plugins\Hex\FileDataBlock.cs" />
+    <Compile Include="Plugins\Hex\HexBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Plugins\Hex\HexBox.Designer.cs">
+      <DependentUpon>HexBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\Hex\HexCasing.cs" />
+    <Compile Include="Plugins\Hex\HexFileViewer.cs" />
+    <Compile Include="Plugins\Hex\HexPlugin.cs" />
+    <Compile Include="Plugins\Hex\IByteCharConverter.cs" />
+    <Compile Include="Plugins\Hex\IByteProvider.cs" />
+    <Compile Include="Plugins\Hex\MemoryDataBlock.cs" />
+    <Compile Include="Plugins\Hex\NativeMethods.cs" />
+    <Compile Include="Plugins\Image\ImageFile.cs" />
+    <Compile Include="Plugins\Image\ImagePlugin.cs" />
+    <Compile Include="Plugins\Image\ImageFileViewer.cs" />
+    <Compile Include="Plugins\IPlugin.cs" />
+    <Compile Include="Plugins\Items\FruaItem.cs" />
+    <Compile Include="Plugins\Items\FruaItemDamageDice.cs" />
+    <Compile Include="Plugins\Items\FruaItemFile.cs" />
+    <Compile Include="Plugins\Items\FruaItemPlugin.cs" />
+    <Compile Include="Plugins\Items\FruaItemViewer.cs" />
+    <Compile Include="Plugins\PluginFactory.cs" />
+    <Compile Include="Plugins\PluginParameter.cs" />
+    <Compile Include="Plugins\SavedGames\FruaSavedGame.cs" />
+    <Compile Include="Plugins\SavedGames\FruaSavedGameFile.cs" />
+    <Compile Include="Plugins\SavedGames\FruaSavedGamePlugin.cs" />
+    <Compile Include="Plugins\SavedGames\FruaSavedGameFileViewer.cs" />
+    <Compile Include="Plugins\Tbl\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plugins\Tbl\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\Tbl\FruaTlbColorTable.cs" />
+    <Compile Include="Plugins\Tbl\FruaTlbColorTableHeader.cs" />
+    <Compile Include="Plugins\Tbl\FruaTlbFile.cs" />
+    <Compile Include="Plugins\Tbl\FruaTlbFileHeader.cs" />
+    <Compile Include="Plugins\Tbl\FruaTblPlugin.cs" />
+    <Compile Include="Plugins\Tbl\FruaTlbImage.cs" />
+    <Compile Include="Plugins\Tbl\FruaTlbImageHeader.cs" />
+    <Compile Include="Plugins\Tbl\FruaTlbViewer.cs" />
+    <Compile Include="Plugins\Tbl\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Plugins\Tbl\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\Text\TextFile.cs" />
+    <Compile Include="Plugins\Text\TextFilePlugin.cs" />
+    <Compile Include="Plugins\Text\TextFileViewer.cs" />
+    <Compile Include="Plugins\Vault\FruaVaultFile.cs" />
+    <Compile Include="Plugins\Vault\FruaVaultFileViewer.cs" />
+    <Compile Include="Plugins\Vault\FruaVaultPlugin.cs" />
+    <Compile Include="Plugins\ViewerHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="WaitCursor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExceptionDialog.resx">
+      <DependentUpon>ExceptionDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plugins\Dax\WallTemplateExportForm.resx">
+      <DependentUpon>WallTemplateExportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plugins\GeoDax\GeoExportForm.resx">
+      <DependentUpon>GeoExportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plugins\Tbl\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
