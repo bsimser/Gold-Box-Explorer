@@ -1,5 +1,7 @@
 # Gold Box Explorer
 
+[![Build Status](https://travis-ci.org/bsimser/goldbox.svg?branch=master)](https://travis-ci.org/bsimser/goldbox)
+
 A Windows File-like Explorer tool to view and export contents of classic "Gold Box" games, role playing games created by Strategic Simulations Inc. (SSI).
 
 Gold Box games are games produced by Strategic Simulations Inc. (SSI) in the late 1980s and early 1990s. They have been a favorite amongst the Generation-X crowd for years and are still played to this day.
