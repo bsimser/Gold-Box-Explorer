@@ -16,7 +16,7 @@ namespace GoldBoxExplorer.Lib.Plugins.Image
 
         public Control GetControl()
         {
-            var bitmap = DevIL.DevIL.LoadBitmap(_filename);
+            var bitmap = System.Drawing.Image.FromFile(_filename);
             var pictureBox = new PictureBox
                                  {
                                      Top = 0,
